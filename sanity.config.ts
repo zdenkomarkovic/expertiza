@@ -4,7 +4,7 @@ import { schemaTypes } from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Ivana Psiholog Blog',
+  title: 'Biro za Veštačenja CMS',
   basePath: '/studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
@@ -17,6 +17,8 @@ export default defineConfig({
           .title('Sadržaj')
           .items([
             S.documentTypeListItem('blog').title('Blog'),
+            S.documentTypeListItem('partnerBanner').title('Partner Baneri'),
+            S.documentTypeListItem('teamMember').title('Naš Tim'),
           ]),
     }),
   ],

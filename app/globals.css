@@ -16,17 +16,17 @@ h3 {
 }
 @layer base {
   :root {
-    --background: 26 41% 96%; /* #faf6f3 */
+    --background: 0 0% 100%; /* #faf6f3 */
     --foreground: 25 29% 11%; /* #39291c */
     --card: 33 28% 96%;
     --card-foreground: 25 29% 11%;
     --popover: 33 28% 96%;
     --popover-foreground: 25 29% 11%;
-    --primary: 27 34% 17%; /* #39291c */
+    --primary: 198 99% 45%; /* #39291c */
     --primary-foreground: 33 28% 96%;
-    --secondary: 27 13% 42%; /* #7a6a5d */
+    --secondary: 211, 93%, 44%; /* #7a6a5d */
     --secondary-foreground: 33 28% 96%;
-    --muted: 32 20% 62%; /* #b19f8b */
+    --muted: 220 12% 86%; /* #b19f8b */
     --muted-foreground: 25 29% 11%;
     --accent: 30 14% 44%;
     --accent-foreground: 33 28% 96%;
@@ -76,6 +76,13 @@ h3 {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom container utility */
+@layer utilities {
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 

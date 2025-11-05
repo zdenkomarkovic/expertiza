@@ -86,30 +86,29 @@ export default function Header() {
     <header
       className={`flex justify-center  ${
         scrolled
-          ? "bg-background/95 text-primary backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md"
+          ? "bg-background/95 text-primary backdrop-blur supports-[backdrop-filter]:bg-background/85 shadow-md"
           : "bg-transparent text-background"
       }  fixed top-0 left-0 right-0 z-[10] transition-colors`}
     >
       <nav
         className={`${
-          scrolled ? "" : "border-transparent  md:border-b md:border-background"
-        } flex items-center justify-between px-8 py-4 max-w-7xl w-full`}
+          scrolled ? "" : ""
+        } flex items-center justify-between py-3 container w-full`}
       >
-        <Link href="/" className="">
+        <Link href="/" className="flex gap-5 items-center">
           <Image
             src={logowhite}
-            alt="IVANA PSIHOLOG"
+            alt="biro za vestacenje"
             width={50}
             height={50}
-            className={`${scrolled ? "hidden" : ""}`}
+            className=""
           />
-          <Image
-            src={logoblack}
-            alt="IVANA PSIHOLOG"
-            width={50}
-            height={50}
-            className={`${scrolled ? "" : "hidden"}`}
-          />
+          <div className="md:text-xl text-center">
+            <p className="font-bold">BIRO ZA VEŠTAČENJA</p>
+            <p className="text-sm">
+              STRUČNA I PROFESIONALNA IZRADA TEHNIČKE DOKUMENTACIJE
+            </p>
+          </div>
         </Link>
         <DesktopNav />
 

@@ -1,38 +1,50 @@
-import { Mail, MapPin, Instagram } from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-3 md:space-y-6 md:px-12">
-      <div className=" p-4 bg-card rounded-lg border border-border">
-        <h3 className="font-semibold text-lg mb-1">Email</h3>
-        <div className="flex justify-center gap-2 items-center">
-          <a
-            href="mailto:ivanapericin.savetovanje@gmail.com"
-            className="flex gap-2 items-center text-primary hover:text-secondary  hover:scale-105 transition-transform duration-300"
-          >
-            <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-            ivanapericin.savetovanje@gmail.com
-          </a>
-        </div>
-      </div>
-      <div className=" p-4 bg-card rounded-lg border border-border">
-        <h3 className="font-semibold text-lg mb-1">Instagram</h3>
-        <div className="flex justify-center gap-2 items-center">
-          <a
-            href="https://www.instagram.com/ivanapericin_path.to.self/"
-            className="flex gap-2 items-center text-primary hover:text-secondary  hover:scale-105 transition-transform duration-300"
-          >
-            <Instagram className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-            ivanapericin_path.to.self
-          </a>
-        </div>
-      </div>
-      <div className=" p-4 bg-card rounded-lg border border-border">
-        <h3 className="font-semibold text-lg mb-1">Lokacija</h3>
-        <div className="flex justify-center gap-2 items-center">
-          <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          Pančevo, Srbija
-        </div>
+    <div className="bg-white rounded-xl shadow-lg p-8">
+      <h2 className="text-2xl font-bold mb-6 text-primary">
+        Kontakt Informacije
+      </h2>
+      <div className="space-y-4">
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg"
+        >
+          <div className="bg-primary text-white p-3 rounded-lg">
+            <Mail className="w-6 h-6" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-600">Email</p>
+            <a
+              href="mailto:office@bzv.rs"
+              className="text-primary font-semibold hover:underline text-lg"
+            >
+              office@bzv.rs
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg"
+        >
+          <div className="bg-primary text-white p-3 rounded-lg">
+            <Phone className="w-6 h-6" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-600">Telefon</p>
+            <a
+              href="tel:+381642757802"
+              className="text-primary font-semibold hover:underline text-lg"
+            >
+              +381 (0) 64 27 57 802
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

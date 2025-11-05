@@ -15,9 +15,9 @@ const moonTime = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ivana Peričin - Psiholog i Psihoterapeut",
+  title: "Biro za Veštačenja - Stručne Ekspertize i Procene",
   description:
-    "Psihološko savetovalište Put ka sebi. Psihoterapija, poslovno savetovanje i korporativni well-being konsalting.",
+    "Profesionalne usluge ekspertiza i veštačenja. Stručni tim za inženjerska veštačenja, protivpožarnu zaštitu i carinske analize.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -28,21 +28,19 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   keywords: [
-    "psiholog",
-    "psihoterapeut",
-    "psihoterapija",
-    "savetovanje",
-    "anksioznost",
-    "depresija",
-    "burnout",
-    "well-being",
-    "Ivana Peričin",
-    "Put ka sebi",
-    "HR konsalting",
-    "karijerno savetovanje",
+    "veštačenja",
+    "ekspertize",
+    "procene",
+    "inženjerska veštačenja",
+    "protivpožarna zaštita",
+    "carinske analize",
+    "sudska veštačenja",
+    "forenzička analiza",
+    "tehnička ispitivanja",
+    "stručne procene",
   ],
   alternates: {
-    canonical: "https://ivanapericin.rs/",
+    canonical: "https://birozavastacenja.rs/",
   },
 };
 

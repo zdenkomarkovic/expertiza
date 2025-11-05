@@ -50,22 +50,24 @@ export default function ContactForm() {
     form.reset();
   };
   return (
-    <div className="">
+    <div className="bg-white rounded-xl shadow-lg p-8">
+      <h2 className="text-2xl font-bold mb-6 text-primary">Kontakt Forma</h2>
       <Form {...form}>
         <form
-          className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-lg shadow-primary rounded-lg"
+          className="space-y-6"
           onSubmit={form.handleSubmit(onSubmit)}
         >
-          <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-8">
+          <div className="flex flex-col gap-6">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="lg:text-xl">Ime i Prezime:</FormLabel>
-
+                  <FormLabel className="text-base font-medium">
+                    Ime i Prezime <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="Unesite ime i prezime" {...field} />
+                    <Input placeholder="Unesite vaše ime i prezime" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -77,9 +79,9 @@ export default function ContactForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="lg:text-xl">Broj telefona:</FormLabel>
+                  <FormLabel className="text-base font-medium">Telefon</FormLabel>
                   <FormControl>
-                    <Input placeholder="Unesite vas broj telefona" {...field} />
+                    <Input placeholder="+381 (0) 64 123 4567" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -91,9 +93,11 @@ export default function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="lg:text-xl">Email:</FormLabel>
+                  <FormLabel className="text-base font-medium">
+                    Email Adresa <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="john@example.com" {...field} />
+                    <Input placeholder="vas.email@primer.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -105,12 +109,14 @@ export default function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="lg:text-xl  ">Vasa poruka:</FormLabel>
+                  <FormLabel className="text-base font-medium">
+                    Poruka <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       {...field}
-                      placeholder="Vasa poruka za nas"
-                      className="text-gray-800"
+                      placeholder="Napišite vašu poruku ovde..."
+                      className="text-gray-800 min-h-[150px]"
                     />
                   </FormControl>
                   <FormMessage />
@@ -118,10 +124,12 @@ export default function ContactForm() {
               )}
             />
             <Button
+              type="submit"
               disabled={isLoading}
-              className="bg-primary  hover:bg-gray-600 transition-colors ease-in-out duration-500"
+              className="w-full md:w-auto px-8 py-6 text-lg bg-primary hover:bg-primary/90 transition-colors ease-in-out duration-500"
+              size="lg"
             >
-              {isLoading ? "Sending....." : "Send"}
+              {isLoading ? "Šalje se..." : "Pošalji Poruku"}
             </Button>
           </div>
         </form>

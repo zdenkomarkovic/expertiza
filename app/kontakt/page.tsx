@@ -1,42 +1,71 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
+import PartnerBanners from "@/components/PartnerBanners";
+
+const FadeInSection = ({
+  children,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+}) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, delay }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default function KontaktPage() {
   return (
-    <main className="min-h-screen">
-      <div className="bg-primary py-[42px] md:py-[45px]"> </div>
-      <div className="max-w-[80rem] mx-auto py-8 px-4 md:px-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-8 md:mb-16">
-          Kontakt
-        </h1>
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+      <div className="bg-primary h-20"></div>{" "}
+      <div className="max-w-7xl py-24 mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeInSection>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+              STUPITE U KONTAKT SA NAMA
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Ukoliko imate pitanja ili ste zainteresovani za saradnju obratite
+              nam se telefonski ili putem maila. U svakom slučaju možete
+              popuniti donju kontakt formu, a mi ćemo odgovoriti u najskorijem
+              mogućem roku.
+            </p>
+          </div>
+        </FadeInSection>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-8 md:mb-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left Section - Contact Form and Info */}
           <div className=" space-y-8">
-            <div>
-              <p className="text-lg leading-relaxed mb-8 text-center">
-                Ukoliko imate pitanja ili želite da zakažete termin, slobodno me
-                kontaktirajte putem telefona, email-a ili kontakt forme.
-                Odgovoriću vam u najkraćem mogućem roku.
-              </p>
-            </div>
-
-            <ContactInfo />
+            <FadeInSection delay={0.3}>
+              <ContactInfo />
+            </FadeInSection>
+            <FadeInSection delay={0.2}>
+              <ContactForm />
+            </FadeInSection>
           </div>
 
-          <div>
-            <ContactForm />
+          {/* Right Section - Partner Banners */}
+          <div className="">
+            <FadeInSection delay={0.4}>
+              <PartnerBanners />
+            </FadeInSection>
           </div>
-        </div>
-
-        <div className="bg-secondary/10 p-4 md:p-8 rounded-lg text-center">
-          <h3 className="text-2xl font-bold text-primary mb-4">
-            Zakazivanje termina
-          </h3>
-          <p className="text-lg leading-relaxed">
-            Termini se zakazuju telefonski ili putem email-a. Molim vas da
-            prilikom zakazivanja navedete kratki opis razloga dolaska kako bih
-            mogla da vam obezbedim odgovarajuće vreme i prostor za razgovor.
-          </p>
         </div>
       </div>
     </main>

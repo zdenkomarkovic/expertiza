@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
-import Newsletter from "./Newsletter";
 import ButtonToTop from "./ButtonToTop";
 
 export default function ConditionalLayout({
