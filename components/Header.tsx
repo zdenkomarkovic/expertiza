@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import logowhite from "../public/android-chrome-192x192.png";
-import logoblack from "../public/android-chrome-192x192.png";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
 

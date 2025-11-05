@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import {
-  CheckCircle2,
   Zap,
   Cog,
   FlameKindling,
