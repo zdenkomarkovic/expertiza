@@ -66,13 +66,13 @@ export default function ONama() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif"
+            src="/images/2149367137.jpg"
             alt="O nama"
             fill
-            className="object-cover"
+            className="object-cover object-[50%_20%]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Hero Content */}

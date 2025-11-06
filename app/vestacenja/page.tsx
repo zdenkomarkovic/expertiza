@@ -81,13 +81,13 @@ export default function Vestacenja() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/1197.jpg"
+            src="/images/2147785631.jpg"
             alt="Oblasti veštačenja"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Hero Content */}
