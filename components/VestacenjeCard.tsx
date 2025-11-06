@@ -42,7 +42,7 @@ export default function VestacenjeCard({
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30  to-transparent" />
           </div>
 
           {/* Content Section */}

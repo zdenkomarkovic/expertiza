@@ -9,11 +9,11 @@ import {
   Cog,
   FlameKindling,
   ShieldCheck,
-  Award,
-  Target,
-  Settings,
-  Clock,
-  FileCheck,
+  // Award,
+  // Target,
+  // Settings,
+  // Clock,
+  // FileCheck,
 } from "lucide-react";
 import VestacenjeSection from "@/components/VestacenjeSection";
 
@@ -72,38 +72,38 @@ const oblasti = [
   },
 ];
 
-const prednosti = [
-  {
-    icon: <Award className="w-8 h-8" />,
-    title: "Visok nivo stručnosti i iskustva",
-    description:
-      "Naš tim čine licencirani inženjeri i eksperti sa bogatim iskustvom u svojim oblastima.",
-  },
-  {
-    icon: <Target className="w-8 h-8" />,
-    title: "Pouzdane i precizne analize",
-    description:
-      "Svaka ekspertiza se izrađuje na osnovu detaljnih istraživanja i proverenih podataka.",
-  },
-  {
-    icon: <Settings className="w-8 h-8" />,
-    title: "Prilagođena rešenja",
-    description:
-      "Svaki projekat je jedinstven, zbog čega nudimo individualno prilagođene analize koje odgovaraju vašim specifičnim potrebama.",
-  },
-  {
-    icon: <FileCheck className="w-8 h-8" />,
-    title: "Usklađenost sa standardima i propisima",
-    description:
-      "Garantujemo da su naši izveštaji i preporuke u potpunosti usklađeni sa važećim zakonima i normativima.",
-  },
-  {
-    icon: <Clock className="w-8 h-8" />,
-    title: "Efikasnost i pravovremenost",
-    description:
-      "Poštujemo rokove i isporučujemo rezultate u dogovorenom vremenskom okviru.",
-  },
-];
+// const prednosti = [
+//   {
+//     icon: <Award className="w-8 h-8" />,
+//     title: "Visok nivo stručnosti i iskustva",
+//     description:
+//       "Naš tim čine licencirani inženjeri i eksperti sa bogatim iskustvom u svojim oblastima.",
+//   },
+//   {
+//     icon: <Target className="w-8 h-8" />,
+//     title: "Pouzdane i precizne analize",
+//     description:
+//       "Svaka ekspertiza se izrađuje na osnovu detaljnih istraživanja i proverenih podataka.",
+//   },
+//   {
+//     icon: <Settings className="w-8 h-8" />,
+//     title: "Prilagođena rešenja",
+//     description:
+//       "Svaki projekat je jedinstven, zbog čega nudimo individualno prilagođene analize koje odgovaraju vašim specifičnim potrebama.",
+//   },
+//   {
+//     icon: <FileCheck className="w-8 h-8" />,
+//     title: "Usklađenost sa standardima i propisima",
+//     description:
+//       "Garantujemo da su naši izveštaji i preporuke u potpunosti usklađeni sa važećim zakonima i normativima.",
+//   },
+//   {
+//     icon: <Clock className="w-8 h-8" />,
+//     title: "Efikasnost i pravovremenost",
+//     description:
+//       "Poštujemo rokove i isporučujemo rezultate u dogovorenom vremenskom okviru.",
+//   },
+// ];
 
 export default function Ekspertize() {
   return (
@@ -200,7 +200,7 @@ export default function Ekspertize() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
+      {/* <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-primary">
@@ -208,7 +208,6 @@ export default function Ekspertize() {
             </h2>
           </FadeInSection>
 
-          {/* Prvi red - 3 kartice */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             {prednosti.slice(0, 3).map((prednost, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
@@ -235,7 +234,6 @@ export default function Ekspertize() {
             ))}
           </div>
 
-          {/* Drugi red - 2 kartice centrirane */}
           <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
             {prednosti.slice(3).map((prednost, index) => (
               <FadeInSection key={index + 3} delay={(index + 3) * 0.1}>
@@ -271,7 +269,7 @@ export default function Ekspertize() {
             </div>
           </FadeInSection>
         </div>
-      </section>
+      </section> */}
 
       {/* Detailed Sections */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">

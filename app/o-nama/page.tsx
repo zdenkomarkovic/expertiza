@@ -129,7 +129,9 @@ export default function ONama() {
                 <p>
                   Veštačenja i analize koje sprovodi ovaj tim često se koriste u
                   sudskim procesima, gde je potrebno utvrditi tačne uzroke
-                  tehničkih problema i odgovornosti.
+                  tehničkih problema i odgovornosti. Svaki izveštaj veštaka je
+                  pripremljen sa najvišim standardima stručnosti i objektivnosti,
+                  pružajući ključne dokaze tokom sudske parnice.
                 </p>
 
                 <p>

@@ -4,7 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { CheckCircle2, Shield, FileText, ChevronRight } from "lucide-react";
+import {
+  CheckCircle2,
+  Shield,
+  FileText,
+  ChevronRight,
+  Award,
+  Target,
+  Settings,
+  Clock,
+  FileCheck,
+} from "lucide-react";
 import VestacenjeCard from "@/components/VestacenjeCard";
 
 const services = [
@@ -12,7 +22,7 @@ const services = [
     icon: <FileText className="w-12 h-12" />,
     title: "Ekspertize i veštačenja",
     description:
-      "Naši stručnjaci nude detaljne analize i veštačenja u raznim oblastima, oslanjajući se na najnovije metode i tehnologije",
+      "Naši stručnjaci nude detaljne analize i veštačenje u raznim oblastima, pripremajući stručne izveštaje veštaka za sudski proces. Svako veštačenje se vrši u skladu sa važećim propisima i standardima.",
   },
   {
     icon: <Shield className="w-12 h-12" />,
@@ -33,42 +43,42 @@ const vestacenjaData = [
     title: "Požari, Eksplozije i Havarije",
     description:
       "Stručno utvrđivanje uzroka požara, eksplozija i havarija. Detaljne istrage, procena štete i forenzička analiza sistema za potrebe sudskih i osiguravajućih postupaka.",
-    imageSrc: "/images/1197.jpg",
+    imageSrc: "/images/pozari.avif",
     href: "/vestacenja#pozari-eksplozije-havarije",
   },
   {
     title: "Trasologija - Opšta",
     description:
       "Analiza tragova oruđa, alata, gazećih površina i foto/video materijala. Rekonstrukcija događaja i identifikacija dokaza za istražne i sudske postupke.",
-    imageSrc: "/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif",
+    imageSrc: "/images/topsta.avif",
     href: "/vestacenja#trasologija-opsta",
   },
   {
     title: "Trasologija - Saobraćajna",
     description:
       "Analiza saobraćajnih nesreća, rekonstrukcija događaja i utvrđivanje uzročno-posledičnih veza. Stručna veštačenja za potrebe suda i osiguravajućih društava.",
-    imageSrc: "/images/1197.jpg",
+    imageSrc: "/images/tsaobracajna.avif",
     href: "/vestacenja#trasologija-saobracajna",
   },
   {
     title: "Stanje Sijalica na Vozilima",
     description:
       "Forenzička analiza stanja sijalica nakon saobraćajne nezgode. Laboratorijska ispitivanja i mikroskopske analize za utvrđivanje doprinosa učesnika u nesreći.",
-    imageSrc: "/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif",
+    imageSrc: "/images/stanjesijalica.avif",
     href: "/vestacenja#stanje-sijalica",
   },
   {
     title: "ID Oznake na Vozilima (VIN)",
     description:
       "Veštačenje autentičnosti VIN oznaka, detekcija falsifikovanja i identifikacija vozila. Tehnička analiza identifikacionih brojeva za potrebe sudskih i carinskih postupaka.",
-    imageSrc: "/images/1197.jpg",
+    imageSrc: "/images/idoznake.avif",
     href: "/vestacenja#id-oznake-vozila",
   },
   {
     title: "Dokumenta & Rukopisi",
     description:
       "Forenzička analiza rukopisa i dokumenata. Identifikacija falsifikata, utvrđivanje autentičnosti i detekcija naknadnih izmena putem fizičkih i hemijskih analiza.",
-    imageSrc: "/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif",
+    imageSrc: "/images/dokumenti.avif",
     href: "/vestacenja#dokumenta-rukopisi",
   },
 ];
@@ -78,29 +88,62 @@ const expertizeData = [
     title: "Elektrotehnika",
     description:
       "Projektovanje i analiza elektroinstalacija. Kompletna tehnička dokumentacija, revizija projekata i dokumentacija za građevinske i upotrebne dozvole u skladu sa standardima.",
-    imageSrc: "/images/1197.jpg",
+    imageSrc: "/images/elektrotehnika.avif",
     href: "/ekspertize#elektrotehnika",
   },
   {
     title: "Mašinska Tehnika",
     description:
       "Projektovanje HVAC, vodovod, kanalizacija i gasne instalacije. Energetska efikasnost, termičke analize i hidraulički proračuni za industrijska postrojenja.",
-    imageSrc: "/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif",
+    imageSrc: "/images/masinskatehnika.avif",
     href: "/ekspertize#masinska-tehnika",
   },
   {
     title: "Protivpožarna Zaštita",
     description:
       "Glavni projekat zaštite od požara, sprinkler i hidrantski sistemi, detekcija i dojava požara. Procena rizika i strategije evakuacije za kompleksne objekte.",
-    imageSrc: "/images/1197.jpg",
+    imageSrc: "/images/pozarnazastita.avif",
     href: "/ekspertize#protivpozarna-zastita",
   },
   {
     title: "Carinsko Poslovanje",
     description:
       "Stručne ekspertize iz carinskog poslovanja. Klasifikacija robe, tarifiranje, upravljanje rizicima i optimizacija uvozno-izvoznih procedura za efikasno poslovanje.",
-    imageSrc: "/images/bbe0fa_6da37e5292b544d1ac6cab8e00c7a7ea~mv2.avif",
+    imageSrc: "/images/carina.avif",
     href: "/ekspertize#carinsko-poslovanje",
+  },
+];
+
+const prednosti = [
+  {
+    icon: <Award className="w-8 h-8" />,
+    title: "Visok nivo stručnosti i iskustva",
+    description:
+      "Naš tim čine licencirani inženjeri i eksperti sa bogatim iskustvom u svojim oblastima.",
+  },
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: "Pouzdane i precizne analize",
+    description:
+      "Svaka ekspertiza se izrađuje na osnovu detaljnih istraživanja i proverenih podataka.",
+  },
+  {
+    icon: <Settings className="w-8 h-8" />,
+    title: "Prilagođena rešenja",
+    description:
+      "Svaki projekat je jedinstven, zbog čega nudimo individualno prilagođene analize koje odgovaraju vašim specifičnim potrebama.",
+  },
+  {
+    icon: <FileCheck className="w-8 h-8" />,
+    title: "Usklađenost sa standardima i propisima",
+    description:
+      "Garantujemo da su naši izveštaji i preporuke u potpunosti usklađeni sa važećim zakonima i normativima.",
+  },
+  {
+    icon: <Clock className="w-8 h-8" />,
+    title: "Efikasnost i pravovremenost",
+    description:
+      "Poštujemo rokove i isporučujemo rezultate u dogovorenom vremenskom okviru.",
   },
 ];
 
@@ -209,9 +252,17 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-              Naše Usluge
-            </h2>
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                Stručna Podrška u Sudskim Postupcima
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-16">
+                Naš tim pruža sveobuhvatnu forenziku i tehničku podršku tokom
+                sudske parnice. Specijalizovani smo za izradu stručnih nalaza
+                koji pomažu sudovima da donesu ispravne odluke zasnovane na
+                naučnim metodama i forenzičkoj analizi.
+              </p>
+            </div>
           </FadeInSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -320,6 +371,79 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
+      </section>
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInSection>
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-primary">
+              Zašto odabrati nas?
+            </h2>
+          </FadeInSection>
+
+          {/* Prvi red - 3 kartice */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {prednosti.slice(0, 3).map((prednost, index) => (
+              <FadeInSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-primary mb-4 inline-block"
+                  >
+                    {prednost.icon}
+                  </motion.div>
+                  <h3 className="text-xl font-bold mb-3 text-primary">
+                    {prednost.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {prednost.description}
+                  </p>
+                </motion.div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          {/* Drugi red - 2 kartice centrirane */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
+            {prednosti.slice(3).map((prednost, index) => (
+              <FadeInSection key={index + 3} delay={(index + 3) * 0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-primary mb-4 inline-block"
+                  >
+                    {prednost.icon}
+                  </motion.div>
+                  <h3 className="text-xl font-bold mb-3 text-primary">
+                    {prednost.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {prednost.description}
+                  </p>
+                </motion.div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection delay={0.5}>
+            <div className="text-center">
+              <p className="text-xl md:text-2xl font-semibold text-primary">
+                Ukoliko vam je potrebna stručna analiza iz navedenih oblasti na
+                pravom ste mestu!
+              </p>
+            </div>
+          </FadeInSection>
         </div>
       </section>
     </main>
