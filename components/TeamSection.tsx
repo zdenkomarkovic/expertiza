@@ -113,7 +113,9 @@ export default function TeamSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
+                  <h3 className="text-2xl font-bold mb-1 text-left text-white">
+                    {member.name}
+                  </h3>
                   <p className="text-lg">{member.position}</p>
                 </div>
               </div>
