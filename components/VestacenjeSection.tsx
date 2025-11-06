@@ -56,7 +56,7 @@ export default function VestacenjeSection({
           {title}
         </motion.h2>
 
-        <p className="text-lg md:text-xl font-semibold text-gray-700 mb-8">
+        <p className="text-lg md:text-xl font-semibold text-gray-900 mb-8">
           {introText}
         </p>
 
@@ -79,7 +79,7 @@ export default function VestacenjeSection({
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-300 text-white flex items-center justify-center font-bold text-base group-hover:scale-110 transition-transform duration-300 shadow-md">
                   {number}
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-1 pt-1.5 text-base md:text-lg">
+                <p className="text-gray-900 leading-relaxed flex-1 pt-1.5 text-base md:text-lg">
                   {text}
                 </p>
               </motion.div>

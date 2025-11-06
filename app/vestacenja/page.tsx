@@ -154,7 +154,7 @@ export default function Vestacenja() {
           {/* Descriptive Text */}
           <FadeInSection>
             <div className=" mx-auto">
-              <div className="prose prose-lg max-w-none text-gray-700 space-y-6 leading-relaxed">
+              <div className="prose prose-lg max-w-none text-gray-900 space-y-6 leading-relaxed">
                 <p>
                   Veštačenje predstavlja stub pravosudnog sistema i istražnih
                   postupaka, omogućavajući sveobuhvatnu analizu i interpretaciju

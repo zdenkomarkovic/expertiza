@@ -148,7 +148,7 @@ export default function Ekspertize() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <div className="max-w-4xl mx-auto mb-16">
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
+              <p className="text-lg md:text-xl text-gray-900 leading-relaxed text-center">
                 U današnjem dinamičnom okruženju, precizne analize i stručno
                 znanje su ključni faktori za donošenje ispravnih odluka. Naš tim
                 iskusnih profesionalaca pruža ekspertize u oblasti mašinskog i
@@ -187,7 +187,7 @@ export default function Ekspertize() {
                     <h3 className="text-xl font-bold text-primary mb-4">
                       {oblast.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-900 leading-relaxed">
                       {oblast.description}
                     </p>
                     <p className="text-right">Saznaj više...</p>

@@ -50,7 +50,7 @@ export default function VestacenjeCard({
             <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-secondary transition-colors duration-300">
               {title}
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-4 flex-1 text-sm md:text-base">
+            <p className="text-gray-900 leading-relaxed mb-4 flex-1 text-sm md:text-base">
               {description}
             </p>
 

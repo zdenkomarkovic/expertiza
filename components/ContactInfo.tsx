@@ -18,7 +18,7 @@ export default function ContactInfo() {
             <Mail className="w-6 h-6" />
           </div>
           <div>
-            <p className="text-sm text-gray-600">Email</p>
+            <p className="text-sm text-gray-900">Email</p>
             <a
               href="mailto:office@bzv.rs"
               className="text-primary font-semibold hover:underline text-lg"
@@ -36,7 +36,7 @@ export default function ContactInfo() {
             <Phone className="w-6 h-6" />
           </div>
           <div>
-            <p className="text-sm text-gray-600">Telefon</p>
+            <p className="text-sm text-gray-900">Telefon</p>
             <a
               href="tel:+381642757802"
               className="text-primary font-semibold hover:underline text-lg"

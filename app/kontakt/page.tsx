@@ -40,7 +40,7 @@ export default function KontaktPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
               STUPITE U KONTAKT SA NAMA
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
               Ukoliko imate pitanja ili ste zainteresovani za saradnju obratite
               nam se telefonski ili putem maila. U svakom slučaju možete
               popuniti donju kontakt formu, a mi ćemo odgovoriti u najskorijem

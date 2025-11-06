@@ -84,12 +84,14 @@ export default function PartnerBanners() {
                       />
                       <div>
                         <p>{banner.title}</p>
-                        <p className="text-right text-xs mt-3">Vidi vise...</p>
+                        <p className="text-right text-xs mt-3 text-gray-900">
+                          Vidi vise...
+                        </p>
                       </div>
                     </div>
                     {banner.description && (
                       <div className="p-3 bg-gray-50 border-t">
-                        <p className="text-xs text-gray-600 text-center">
+                        <p className="text-xs text-gray-900 text-center">
                           {banner.description}
                         </p>
                       </div>
@@ -97,17 +99,24 @@ export default function PartnerBanners() {
                   </a>
                 ) : (
                   <>
-                    <div className="relative w-full h-48">
+                    <div className="relative w-full h-30 flex gap-5 items-center">
                       <Image
-                        src={urlFor(banner.image).width(300).height(250).url()}
+                        src={urlFor(banner.image).url()}
                         alt={banner.title}
-                        fill
+                        width={100}
+                        height={100}
                         className="object-contain p-4"
-                      />
+                      />{" "}
+                      <div>
+                        <p>{banner.title}</p>
+                        <p className="text-right text-xs mt-3 text-gray-900">
+                          Vidi vise...
+                        </p>
+                      </div>
                     </div>
                     {banner.description && (
                       <div className="p-3 bg-gray-50 border-t">
-                        <p className="text-xs text-gray-600 text-center">
+                        <p className="text-xs text-gray-900 text-center">
                           {banner.description}
                         </p>
                       </div>
@@ -143,7 +152,7 @@ export default function PartnerBanners() {
           <h3 className="font-semibold text-primary mb-2">
             Zainteresovani za saradnju?
           </h3>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-900">
             Kontaktirajte nas za mogućnosti oglašavanja i partnerstva.
           </p>
         </motion.div>

@@ -87,7 +87,7 @@ export default function TeamSection() {
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-primary">
             Naš Tim
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
+          <p className="text-lg md:text-xl text-gray-900 text-center max-w-3xl mx-auto mb-16">
             Stručnjaci sa višegodišnjim iskustvom u oblasti ekspertiza i
             veštačenja
           </p>
@@ -120,7 +120,7 @@ export default function TeamSection() {
 
               <div className="p-6">
                 {member.bio && (
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-900 mb-4 leading-relaxed">
                     {member.bio}
                   </p>
                 )}
@@ -128,7 +128,7 @@ export default function TeamSection() {
                 {(member.email || member.phone) && (
                   <div className="space-y-2 pt-4 border-t border-gray-200">
                     {member.email && (
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-2 text-sm text-gray-900">
                         <Mail className="w-4 h-4 text-primary" />
                         <a
                           href={`mailto:${member.email}`}
@@ -139,7 +139,7 @@ export default function TeamSection() {
                       </div>
                     )}
                     {member.phone && (
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-2 text-sm text-gray-900">
                         <Phone className="w-4 h-4 text-primary" />
                         <a
                           href={`tel:${member.phone}`}

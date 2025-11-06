@@ -256,7 +256,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
                 Stručna Podrška u Sudskim Postupcima
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-16">
+              <p className="text-lg text-gray-900 leading-relaxed mb-16">
                 Naš tim pruža sveobuhvatnu forenziku i tehničku podršku tokom
                 sudske parnice. Specijalizovani smo za izradu stručnih nalaza
                 koji pomažu sudovima da donesu ispravne odluke zasnovane na
@@ -283,7 +283,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-4 text-primary">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-900 leading-relaxed">
                     {service.description}
                   </p>
                 </motion.div>
@@ -301,7 +301,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Oblasti Veštačenja
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
                 Specijalizovani za forenzička veštačenja i tehničke analize u
                 različitim oblastima
               </p>
@@ -352,7 +352,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Oblasti Ekspertiza
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
                 Profesionalne ekspertize i projektovanje u oblasti elektro i
                 mašinskog inženjerstva
               </p>
@@ -401,7 +401,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-3 text-primary">
                     {prednost.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-900 leading-relaxed">
                     {prednost.description}
                   </p>
                 </motion.div>
@@ -428,7 +428,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-3 text-primary">
                     {prednost.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-900 leading-relaxed">
                     {prednost.description}
                   </p>
                 </motion.div>

@@ -103,7 +103,7 @@ export default function ONama() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <div className=" mx-auto">
-              <div className="prose prose-lg max-w-none text-gray-700 space-y-3 leading-relaxed">
+              <div className="prose prose-lg max-w-none text-gray-900 space-y-3 leading-relaxed">
                 <p>
                   Naš rad obuhvata ekspertize, analize i veštačenja koje su od
                   suštinskog značaja za potrebe suda i nadležnih organa,
@@ -130,8 +130,8 @@ export default function ONama() {
                   Veštačenja i analize koje sprovodi ovaj tim često se koriste u
                   sudskim procesima, gde je potrebno utvrditi tačne uzroke
                   tehničkih problema i odgovornosti. Svaki izveštaj veštaka je
-                  pripremljen sa najvišim standardima stručnosti i objektivnosti,
-                  pružajući ključne dokaze tokom sudske parnice.
+                  pripremljen sa najvišim standardima stručnosti i
+                  objektivnosti, pružajući ključne dokaze tokom sudske parnice.
                 </p>
 
                 <p>
@@ -243,7 +243,7 @@ export default function ONama() {
                   <h3 className="text-2xl font-bold mb-3 text-primary">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <p className="text-gray-900">{value.description}</p>
                 </motion.div>
               </FadeInSection>
             ))}
