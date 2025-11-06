@@ -150,9 +150,11 @@ const prednosti = [
 const FadeInSection = ({
   children,
   delay = 0,
+  className = "",
 }: {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -165,6 +167,7 @@ const FadeInSection = ({
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay }}
+      className={className}
     >
       {children}
     </motion.div>
@@ -195,7 +198,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight px-2">
               VAŠ PARTNER ZA STRUČNE
               <br />
               <span className=" bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
@@ -208,7 +211,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-xl lg:text-2xl text-white mb-8 max-w-3xl mx-auto px-4"
           >
             Profesionalne Usluge Ekspertiza i Veštačenja
           </motion.p>
@@ -253,10 +256,10 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-4 md:mb-6 text-primary px-4">
                 Stručna Podrška u Sudskim Postupcima
               </h2>
-              <p className="text-lg text-gray-900 leading-relaxed mb-16">
+              <p className="text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed mb-12 md:mb-16 px-4">
                 Naš tim pruža sveobuhvatnu forenziku i tehničku podršku tokom
                 sudske parnice. Specijalizovani smo za izradu stručnih nalaza
                 koji pomažu sudovima da donesu ispravne odluke zasnovane na
@@ -265,50 +268,78 @@ export default function Home() {
             </div>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <FadeInSection key={index} delay={index * 0.2}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.slice(0, 2).map((service, index) => (
+              <FadeInSection key={index} delay={index * 0.2} className="h-full">
                 <motion.div
                   whileHover={{ scale: 1.05, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="text-primary mb-6 inline-block"
+                    className="text-primary mb-4 md:mb-6 inline-block"
                   >
                     {service.icon}
                   </motion.div>
-                  <h3 className="text-2xl font-bold mb-4 text-primary">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-primary">
                     {service.title}
                   </h3>
-                  <p className="text-gray-900 leading-relaxed">
+                  <p className="text-base md:text-base text-gray-900 leading-relaxed">
                     {service.description}
                   </p>
                 </motion.div>
               </FadeInSection>
             ))}
+
+            <div className="md:col-span-2 lg:col-span-1 h-full">
+              <div className="flex justify-center h-full">
+                <div className="w-full md:w-[calc(50%-1rem)] lg:w-full h-full">
+                  <FadeInSection delay={0.4} className="h-full">
+                    <motion.div
+                      whileHover={{ scale: 1.05, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    >
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-primary mb-4 md:mb-6 inline-block"
+                      >
+                        {services[2].icon}
+                      </motion.div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-primary">
+                        {services[2].title}
+                      </h3>
+                      <p className="text-base md:text-base text-gray-900 leading-relaxed">
+                        {services[2].description}
+                      </p>
+                    </motion.div>
+                  </FadeInSection>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Oblasti Veštačenja Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-4">
                 Oblasti Veštačenja
               </h2>
-              <p className="text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-900 max-w-3xl mx-auto px-4">
                 Specijalizovani za forenzička veštačenja i tehničke analize u
                 različitim oblastima
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {vestacenjaData.map((vestacenje, index) => (
               <VestacenjeCard
                 key={index}
@@ -325,18 +356,18 @@ export default function Home() {
 
       {/* CTA Section */}
       <FadeInSection>
-        <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white">
               Potrebna vam je naša usluga?
             </h2>
-            <p className="text-xl mb-8 text-gray-100">
+            <p className="text-lg md:text-xl mb-6 md:mb-8 text-gray-100 px-4">
               Kontaktirajte nas danas i saznajte kako možemo pomoći vašem
               projektu
             </p>
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Kontaktirajte nas
               <ChevronRight className="w-5 h-5" />
@@ -345,21 +376,21 @@ export default function Home() {
         </section>
       </FadeInSection>
       {/* Oblasti Ekspertiza Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-4">
                 Oblasti Ekspertiza
               </h2>
-              <p className="text-lg md:text-xl text-gray-900 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-900 max-w-3xl mx-auto px-4">
                 Profesionalne ekspertize i projektovanje u oblasti elektro i
                 mašinskog inženjerstva
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {expertizeData.map((expertiza, index) => (
               <VestacenjeCard
                 key={index}
@@ -374,71 +405,150 @@ export default function Home() {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-200">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-primary">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 text-primary px-4">
               Zašto odabrati nas?
             </h2>
           </FadeInSection>
 
-          {/* Prvi red - 3 kartice */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          {/* Prvi deo - 3 kartice */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             {prednosti.slice(0, 3).map((prednost, index) => (
               <FadeInSection key={index} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-5 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="text-primary mb-4 inline-block"
+                    className="text-primary mb-3 md:mb-4 inline-block"
                   >
                     {prednost.icon}
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-3 text-primary">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-primary">
                     {prednost.title}
                   </h3>
-                  <p className="text-gray-900 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-900 leading-relaxed">
                     {prednost.description}
                   </p>
                 </motion.div>
               </FadeInSection>
             ))}
-          </div>
 
-          {/* Drugi red - 2 kartice centrirane */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
-            {prednosti.slice(3).map((prednost, index) => (
-              <FadeInSection key={index + 3} delay={(index + 3) * 0.1}>
+            {/* Kartica 4 - prikazuje se samo na tablet (md) */}
+            <div className="lg:hidden">
+              <FadeInSection delay={0.3}>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-5 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="text-primary mb-4 inline-block"
+                    className="text-primary mb-3 md:mb-4 inline-block"
                   >
-                    {prednost.icon}
+                    {prednosti[3].icon}
                   </motion.div>
-                  <h3 className="text-xl font-bold mb-3 text-primary">
-                    {prednost.title}
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-primary">
+                    {prednosti[3].title}
                   </h3>
-                  <p className="text-gray-900 leading-relaxed">
-                    {prednost.description}
+                  <p className="text-sm md:text-base text-gray-900 leading-relaxed">
+                    {prednosti[3].description}
                   </p>
                 </motion.div>
               </FadeInSection>
-            ))}
+            </div>
+          </div>
+
+          {/* Kartica 5 na tablet, kartice 4 i 5 na desktop */}
+          <div className="mb-10 md:mb-12">
+            {/* Tablet: samo kartica 5 centrirana */}
+            <div className="lg:hidden">
+              <div className="md:col-span-2">
+                <div className="flex justify-center">
+                  <div className="w-full md:w-[calc(50%-1rem)]">
+                    <FadeInSection delay={0.4}>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-5 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                      >
+                        <motion.div
+                          whileHover={{ rotate: 360 }}
+                          transition={{ duration: 0.6 }}
+                          className="text-primary mb-3 md:mb-4 inline-block"
+                        >
+                          {prednosti[4].icon}
+                        </motion.div>
+                        <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-primary">
+                          {prednosti[4].title}
+                        </h3>
+                        <p className="text-sm md:text-base text-gray-900 leading-relaxed">
+                          {prednosti[4].description}
+                        </p>
+                      </motion.div>
+                    </FadeInSection>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: kartice 4 i 5 centrirane */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
+              <FadeInSection delay={0.3}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-5 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-primary mb-3 md:mb-4 inline-block"
+                  >
+                    {prednosti[3].icon}
+                  </motion.div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-primary">
+                    {prednosti[3].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-900 leading-relaxed">
+                    {prednosti[3].description}
+                  </p>
+                </motion.div>
+              </FadeInSection>
+
+              <FadeInSection delay={0.4}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-gradient-to-br from-gray-300 via-gray-100 h-full p-5 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-primary mb-3 md:mb-4 inline-block"
+                  >
+                    {prednosti[4].icon}
+                  </motion.div>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-primary">
+                    {prednosti[4].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-900 leading-relaxed">
+                    {prednosti[4].description}
+                  </p>
+                </motion.div>
+              </FadeInSection>
+            </div>
           </div>
 
           <FadeInSection delay={0.5}>
-            <div className="text-center">
-              <p className="text-xl md:text-2xl font-semibold text-primary">
+            <div className="text-center px-4">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-primary">
                 Ukoliko vam je potrebna stručna analiza iz navedenih oblasti na
                 pravom ste mestu!
               </p>
