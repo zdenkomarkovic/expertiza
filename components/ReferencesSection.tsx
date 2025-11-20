@@ -97,9 +97,9 @@ export default function ReferencesSection() {
             >
               {/* Logo/Image */}
               {ref.clientImage && (
-                <div className="relative w-32 h-32 mb-4">
+                <div className="relative w-full h-40 mb-4">
                   <Image
-                    src={urlFor(ref.clientImage).width(300).height(300).url()}
+                    src={urlFor(ref.clientImage).url()}
                     alt={ref.clientName || "Reference"}
                     fill
                     className="object-contain"
