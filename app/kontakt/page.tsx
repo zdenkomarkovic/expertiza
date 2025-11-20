@@ -33,7 +33,7 @@ const FadeInSection = ({
 export default function KontaktPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
-      <div className="bg-primary h-20"></div>{" "}
+      <div className="bg-primary h-[108px]"></div>{" "}
       <div className="max-w-7xl py-24 mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <div className="text-center mb-12">

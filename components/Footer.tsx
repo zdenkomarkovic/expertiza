@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import logowhite from "../public/android-chrome-192x192.png";
+import logowhite from "../public/android-chrome-512x512.png";
 
 export default function Footer() {
   return (
@@ -20,9 +20,9 @@ export default function Footer() {
               <Image
                 src={logowhite}
                 alt="Biro za Veštačenja"
-                width={50}
-                height={50}
-                className="hover:scale-105 w-full transition-transform duration-300"
+                width={150}
+                height={150}
+                className="hover:scale-105 transition-transform duration-300"
               />
             </Link>
             <div className="text-sm">

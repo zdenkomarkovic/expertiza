@@ -66,10 +66,10 @@ export default function ONama() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/2149367137.jpg"
+            src="/images/14267.jpg"
             alt="O nama"
             fill
-            className="object-cover object-[50%_20%]"
+            className="object-cover object-[50%_30%]"
             priority
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -89,11 +89,6 @@ export default function ONama() {
                 EKSPERTIZE, VEŠTAČENJA I PROCENE
               </span>
             </h1>
-            <p className="md:text-2xl font-semibold text-white mb-8">
-              Ekspertski tim specijalizovan za stručne ekspertize i veštačenja
-              iz oblasti inženjerskih nauka predstavlja ključnog partnera u
-              rešavanju kompleksnih tehničkih pitanja.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -104,61 +99,57 @@ export default function ONama() {
           <FadeInSection>
             <div className=" mx-auto">
               <div className="prose prose-lg max-w-none text-gray-900 space-y-3 leading-relaxed">
+                <p className="md:text-2xl font-semibold mb-8">
+                  Ekspertski tim specijalizovan za stručne ekspertize i
+                  veštačenja iz oblasti inženjerskih nauka predstavlja ključnog
+                  partnera u rešavanju kompleksnih tehničkih pitanja.
+                </p>{" "}
                 <p>
                   Naš rad obuhvata ekspertize, analize i veštačenja koje su od
                   suštinskog značaja za potrebe suda i nadležnih organa,
                   osiguravajući tačne i objektivne zaključke zasnovane na
                   iskustvenim i naučnim metodama.
                 </p>
-
                 <p>
-                  Ovaj tim eksperata pruža širok spektar usluga, uključujući
-                  inženjerska veštačenja, analize tehničkih projekata, nadzor
-                  nad izvođenjem, procenu šteta i uzroka nesreća, kao i
-                  forenzička ispitivanja u mašinstvu, elektro i mašinskom
-                  inženjeringu, trasologiji i drugim tehničkim i forenzičkim
-                  oblastima.
+                  Pružamo širok spektar usluga, uključujući inženjerska
+                  veštačenja, analize tehničkih projekata, nadzor nad
+                  izvođenjem, procenu šteta i uzroka nesreća, kao i forenzička
+                  ispitivanja u mašinstvu, elektro i mašinskom inženjeringu,
+                  trasologiji i drugim tehničkim i forenzičkim oblastima.
                 </p>
-
                 <p>
-                  Naša ekspertiza je neophodna kako bi se osiguralo da svi
-                  aspekti projektovanja i nadzora budu u skladu sa važećim
-                  propisima i standardima.
+                  Ekspertiza je neophodna kako bi se osiguralo da svi aspekti
+                  projektovanja i nadzora budu u skladu sa važećim propisima i
+                  standardima.
                 </p>
-
                 <p>
-                  Veštačenja i analize koje sprovodi ovaj tim često se koriste u
+                  Veštačenja i analize koje sprovodimo često se koriste u
                   sudskim procesima, gde je potrebno utvrditi tačne uzroke
                   tehničkih problema i odgovornosti. Svaki izveštaj veštaka je
                   pripremljen sa najvišim standardima stručnosti i
                   objektivnosti, pružajući ključne dokaze tokom sudske parnice.
                 </p>
-
                 <p>
                   Zahvaljujući našem visokom nivou stručnosti i iskustva,
                   nadležni organi mogu doneti ispravne odluke na osnovu
                   preciznih podataka.
                 </p>
-
                 <p>
                   Pored standardnih ekspertiza, tim eksperata se bavi i
                   forenzičkom analizom inženjerskih sistema, čime doprinosi
                   boljem razumevanju složenih tehničkih izazova.
                 </p>
-
                 <p>
                   Naš rad omogućava ne samo rešavanje trenutnih problema, već i
                   preventivno delovanje u cilju unapređenja sigurnosti i
                   pouzdanosti tehničkih rešenja.
                 </p>
-
                 <p>
                   Kombinacijom znanja, iskustva u najsloženijim predmetima i
                   moderne tehnologije, ovaj tim pruža usluge od neprocenjive
                   vrednosti za sve koji se oslanjaju na precizna i objektivna
                   veštačenja i analize.
                 </p>
-
                 <p className="text-xl md:text-2xl font-semibold text-primary mt-8">
                   Bilo da su u pitanju potrebe suda, nadležnih organa ili
                   privatnog sektora, stručne ekspertize ovog tima garantuju

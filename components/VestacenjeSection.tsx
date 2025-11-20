@@ -64,7 +64,6 @@ export default function VestacenjeSection({
           {items.map((item, index) => {
             // Split item into number and text
             const match = item.match(/^(\d+)\.\s*(.+)$/);
-            const number = match ? match[1] : index + 1;
             const text = match ? match[2] : item;
 
             return (
@@ -76,10 +75,8 @@ export default function VestacenjeSection({
                 viewport={{ once: true }}
                 className="flex gap-4 group"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-300 text-white flex items-center justify-center font-bold text-base group-hover:scale-110 transition-transform duration-300 shadow-md">
-                  {number}
-                </div>
-                <p className="text-gray-900 leading-relaxed flex-1 pt-1.5 text-base md:text-lg">
+                <div className="flex-shrink-0 mt-2 w-7 h-3 rounded-full bg-gradient-to-br from-primary to-blue-300 text-white flex items-center justify-center font-bold text-base group-hover:scale-110 transition-transform duration-300 shadow-md"></div>
+                <p className="text-gray-900 leading-relaxed  text-base md:text-lg">
                   {text}
                 </p>
               </motion.div>

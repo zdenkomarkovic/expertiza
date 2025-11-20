@@ -277,7 +277,7 @@ export default function Vestacenja() {
           {/* Section 5: Veštačenja ID oznaka na vozilima i identifikacija */}
           <VestacenjeSection
             id="id-oznake-vozila"
-            title="VEŠTAČENJA ID OZNAKA NA VOZILIMA I IDENTIFIKACIJA"
+            title="VEŠTAČENJE ID OZNAKA I IDENTIFIKACIJA VOZILA"
             introText="U svetu gde je krađa vozila i prevara sa VIN oznakama sve prisutnija, veštačenje identifikacionih oznaka igra ključnu ulogu u očuvanju bezbednosti i pravde. Svaka VIN oznaka je kao otisak prsta za vozilo - jedinstvena i nezamenljiva. VIN (Vehicle Identification Number) je jedinstveni identifikacioni broj dodeljen svakom motornom vozilu kada je proizvedeno. Najčešće se sastoji od 17 karaktera koji uključuju brojeve i slova, a pruža ključne informacije kao što su proizvođač, model, godina proizvodnje, i serijski broj vozila. Korišćenje i proveravanje ovih oznaka omogućava vlastima, osiguravajućim kućama i vlasnicima vozila da prate istoriju vozila i potvrde njegovu autentičnost. Ključni elementi veštačenja VIN-a su:"
             items={[
               "Fizička Inspekcija: Fizička provera lokacije VIN oznake na vozilu. To uključuje proveru ne samo pločica sa oznakama, već i graviranja/utiskivanja na šasiji.",

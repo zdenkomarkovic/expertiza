@@ -49,7 +49,7 @@ const MobileMenu = () => (
 );
 
 const DesktopNav = () => (
-  <ul className="hidden gap-16 lg:flex ">
+  <ul className="hidden gap-5 lg:flex ">
     {navList.map((item, index) => {
       return (
         <Link key={index} href={item.link}>
@@ -83,7 +83,7 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-center  ${
+      className={`flex justify-center uppercase ${
         scrolled
           ? "bg-background/95 text-primary backdrop-blur supports-[backdrop-filter]:bg-background/85 shadow-md"
           : "bg-transparent text-background"
@@ -92,19 +92,21 @@ export default function Header() {
       <nav
         className={`${
           scrolled ? "" : ""
-        } flex items-center justify-between py-3 container w-full`}
+        } flex items-center justify-between py-1 container w-full`}
       >
         <Link href="/" className="flex gap-5 items-center">
           <Image
             src={logowhite}
             alt="biro za vestacenje"
-            width={50}
-            height={50}
+            width={100}
+            height={100}
             className=""
           />
           <div className="md:text-xl text-center">
-            <p className="font-bold">BIRO ZA VEŠTAČENJA</p>
-            <p className="text-sm">
+            <p className="font-bold text-sm md:text-xl">
+              BIRO ZA VEŠTAČENJA - EKSPERTIZA
+            </p>
+            <p className="text-xs md:text-sm">
               STRUČNA I PROFESIONALNA IZRADA TEHNIČKE DOKUMENTACIJE
             </p>
           </div>

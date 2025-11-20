@@ -43,42 +43,42 @@ const vestacenjaData = [
     title: "Požari, Eksplozije i Havarije",
     description:
       "Stručno utvrđivanje uzroka požara, eksplozija i havarija. Detaljne istrage, procena štete i forenzička analiza sistema za potrebe sudskih i osiguravajućih postupaka.",
-    imageSrc: "/images/pozari.avif",
+    imageSrc: "/images/Pic Pozar.png",
     href: "/vestacenja#pozari-eksplozije-havarije",
   },
   {
     title: "Trasologija - Opšta",
     description:
       "Analiza tragova oruđa, alata, gazećih površina i foto/video materijala. Rekonstrukcija događaja i identifikacija dokaza za istražne i sudske postupke.",
-    imageSrc: "/images/topsta.avif",
+    imageSrc: "/images/2148848591.jpg",
     href: "/vestacenja#trasologija-opsta",
   },
   {
     title: "Trasologija - Saobraćajna",
     description:
       "Analiza saobraćajnih nesreća, rekonstrukcija događaja i utvrđivanje uzročno-posledičnih veza. Stručna veštačenja za potrebe suda i osiguravajućih društava.",
-    imageSrc: "/images/tsaobracajna.avif",
+    imageSrc: "/images/Tras Saobracaj.jpg",
     href: "/vestacenja#trasologija-saobracajna",
   },
   {
     title: "Stanje Sijalica na Vozilima",
     description:
       "Forenzička analiza stanja sijalica nakon saobraćajne nezgode. Laboratorijska ispitivanja i mikroskopske analize za utvrđivanje doprinosa učesnika u nesreći.",
-    imageSrc: "/images/stanjesijalica.avif",
+    imageSrc: "/images/stanjesijalica.jpg",
     href: "/vestacenja#stanje-sijalica",
   },
   {
     title: "ID Oznake na Vozilima (VIN)",
     description:
       "Veštačenje autentičnosti VIN oznaka, detekcija falsifikovanja i identifikacija vozila. Tehnička analiza identifikacionih brojeva za potrebe sudskih i carinskih postupaka.",
-    imageSrc: "/images/idoznake.avif",
+    imageSrc: "/images/idoznake.jpg",
     href: "/vestacenja#id-oznake-vozila",
   },
   {
     title: "Dokumenta & Rukopisi",
     description:
       "Forenzička analiza rukopisa i dokumenata. Identifikacija falsifikata, utvrđivanje autentičnosti i detekcija naknadnih izmena putem fizičkih i hemijskih analiza.",
-    imageSrc: "/images/dokumenti.avif",
+    imageSrc: "/images/dokumenti.jpg",
     href: "/vestacenja#dokumenta-rukopisi",
   },
 ];
@@ -88,28 +88,28 @@ const expertizeData = [
     title: "Elektrotehnika",
     description:
       "Projektovanje i analiza elektroinstalacija. Kompletna tehnička dokumentacija, revizija projekata i dokumentacija za građevinske i upotrebne dozvole u skladu sa standardima.",
-    imageSrc: "/images/elektrotehnika.avif",
+    imageSrc: "/images/66767.jpg",
     href: "/ekspertize#elektrotehnika",
   },
   {
     title: "Mašinska Tehnika",
     description:
       "Projektovanje HVAC, vodovod, kanalizacija i gasne instalacije. Energetska efikasnost, termičke analize i hidraulički proračuni za industrijska postrojenja.",
-    imageSrc: "/images/masinskatehnika.avif",
+    imageSrc: "/images/Pic Analiza doc.png",
     href: "/ekspertize#masinska-tehnika",
   },
   {
     title: "Protivpožarna Zaštita",
     description:
       "Glavni projekat zaštite od požara, sprinkler i hidrantski sistemi, detekcija i dojava požara. Procena rizika i strategije evakuacije za kompleksne objekte.",
-    imageSrc: "/images/pozarnazastita.avif",
+    imageSrc: "/images/33.jpg",
     href: "/ekspertize#protivpozarna-zastita",
   },
   {
     title: "Carinsko Poslovanje",
     description:
       "Stručne ekspertize iz carinskog poslovanja. Klasifikacija robe, tarifiranje, upravljanje rizicima i optimizacija uvozno-izvoznih procedura za efikasno poslovanje.",
-    imageSrc: "/images/carina.avif",
+    imageSrc: "/images/2148480411.jpg",
     href: "/ekspertize#carinsko-poslovanje",
   },
 ];
@@ -182,13 +182,13 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero.avif"
+            src="/images/10020.jpg"
             alt="Biro za veštačenja"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/30" />
         </div>
 
         {/* Hero Content */}
@@ -257,7 +257,7 @@ export default function Home() {
           <FadeInSection>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-4 md:mb-6 text-primary px-4">
-                Stručna Podrška u Sudskim Postupcima
+                Stručna Podrška u Sudskim i Vansudskim Postupcima
               </h2>
               <p className="text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed mb-12 md:mb-16 px-4">
                 Naš tim pruža sveobuhvatnu forenziku i tehničku podršku tokom
@@ -332,9 +332,9 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-4">
                 Oblasti Veštačenja
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-900 max-w-3xl mx-auto px-4">
-                Specijalizovani za forenzička veštačenja i tehničke analize u
-                različitim oblastima
+              <p className="text-base sm:text-lg md:text-xl text-gray-900  mx-auto px-4">
+                Specijalizovani smo za forenzička veštačenja i tehničke analize
+                u različitim oblastima
               </p>
             </div>
           </FadeInSection>
