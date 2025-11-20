@@ -19,6 +19,7 @@ export default defineConfig({
             S.documentTypeListItem('blog').title('Blog'),
             S.documentTypeListItem('partnerBanner').title('Partner Baneri'),
             S.documentTypeListItem('teamMember').title('Naš Tim'),
+            S.documentTypeListItem('testimonial').title('Reference'),
           ]),
     }),
   ],
