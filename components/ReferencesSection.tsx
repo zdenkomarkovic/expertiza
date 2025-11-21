@@ -84,7 +84,7 @@ export default function ReferencesSection() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {reference.map((ref, index) => (
             <motion.div
               key={ref._id}
@@ -93,7 +93,7 @@ export default function ReferencesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.05 }}
-              className=" shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="rounded-lg overflow-hidden"
             >
               {/* Logo/Image */}
               {ref.clientImage && (
