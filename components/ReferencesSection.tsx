@@ -93,7 +93,7 @@ export default function ReferencesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.05 }}
-              className="rounded-lg overflow-hidden"
+              className=""
             >
               {/* Logo/Image */}
               {ref.clientImage && (
