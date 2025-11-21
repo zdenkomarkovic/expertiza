@@ -84,10 +84,10 @@ export default function ONama() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <h1 className="text-2xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              VAŠ PARTNER ZA STRUČNE
+              VRHUNSKI TIM
               <br />
               <span className=" bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                EKSPERTIZE, VEŠTAČENJA I PROCENE
+                ZA USPEŠNU SARADNJU
               </span>
             </h1>
           </motion.div>
