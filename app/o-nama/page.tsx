@@ -14,6 +14,7 @@ import {
   Scale,
 } from "lucide-react";
 import TeamSection from "@/components/TeamSection";
+import ReferencesSection from "@/components/ReferencesSection";
 
 const FadeInSection = ({
   children,
@@ -244,6 +245,8 @@ export default function ONama() {
 
       {/* Team Section */}
       <TeamSection />
+      {/* References Section */}
+      <ReferencesSection />
     </main>
   );
 }

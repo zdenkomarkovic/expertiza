@@ -16,7 +16,6 @@ import {
   FileCheck,
 } from "lucide-react";
 import VestacenjeCard from "@/components/VestacenjeCard";
-import ReferencesSection from "@/components/ReferencesSection";
 
 const services = [
   {
@@ -557,9 +556,6 @@ export default function Home() {
           </FadeInSection>
         </div>
       </section>
-
-      {/* References Section */}
-      <ReferencesSection />
     </main>
   );
 }
