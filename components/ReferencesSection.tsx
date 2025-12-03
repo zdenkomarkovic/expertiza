@@ -84,7 +84,7 @@ export default function ReferencesSection() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reference.map((ref, index) => (
             <motion.div
               key={ref._id}
@@ -93,7 +93,7 @@ export default function ReferencesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.05 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
+              className="bg-white p-4 rounded-xl shadow-lg overflow-hidden"
             >
               {/* Logo/Image */}
               {ref.clientImage && (
@@ -102,22 +102,20 @@ export default function ReferencesSection() {
                     src={urlFor(ref.clientImage).url()}
                     alt={ref.clientName || "Reference"}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               )}
 
               {/* Content */}
-              <div className="p-6">
+              <div className="">
                 {ref.clientName && (
                   <h3 className="text-xl font-bold text-primary mb-3">
                     {ref.clientName}
                   </h3>
                 )}
                 {ref.testimonial && (
-                  <p className="text-gray-700 leading-relaxed">
-                    {ref.testimonial}
-                  </p>
+                  <p className="text-gray-700 text-lg">{ref.testimonial}</p>
                 )}
               </div>
             </motion.div>
