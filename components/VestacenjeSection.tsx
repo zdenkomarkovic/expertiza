@@ -8,6 +8,7 @@ interface VestacenjeSectionProps {
   introText: string;
   items: string[];
   id?: string;
+  footerText?: string;
 }
 
 const FadeInSection = ({
@@ -39,6 +40,7 @@ export default function VestacenjeSection({
   introText,
   items,
   id,
+  footerText,
 }: VestacenjeSectionProps) {
   return (
     <FadeInSection>
@@ -83,6 +85,20 @@ export default function VestacenjeSection({
             );
           })}
         </div>
+
+        {footerText && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-8 pt-8 border-t border-gray-300"
+          >
+            <p className="text-gray-900 leading-relaxed text-base md:text-lg">
+              {footerText}
+            </p>
+          </motion.div>
+        )}
       </div>
     </FadeInSection>
   );

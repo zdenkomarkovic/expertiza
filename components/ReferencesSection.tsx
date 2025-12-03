@@ -93,7 +93,7 @@ export default function ReferencesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.05 }}
-              className=""
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
             >
               {/* Logo/Image */}
               {ref.clientImage && (
@@ -106,6 +106,20 @@ export default function ReferencesSection() {
                   />
                 </div>
               )}
+
+              {/* Content */}
+              <div className="p-6">
+                {ref.clientName && (
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    {ref.clientName}
+                  </h3>
+                )}
+                {ref.testimonial && (
+                  <p className="text-gray-700 leading-relaxed">
+                    {ref.testimonial}
+                  </p>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>

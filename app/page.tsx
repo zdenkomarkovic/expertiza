@@ -81,6 +81,20 @@ const vestacenjaData = [
     imageSrc: "/images/dokumenti.jpg",
     href: "/vestacenja#dokumenta-rukopisi",
   },
+  {
+    title: "Procene Vrednosti",
+    description:
+      "Procene vrednosti opreme, mašina i štete nakon požara, havarija i saobraćajnih nezgoda. Metodološki dosledne analize u skladu sa IVS i MRS 16 standardima.",
+    imageSrc: "/images/10020.jpg",
+    href: "/vestacenja#procene-vrednosti",
+  },
+  {
+    title: "Kriminalistička Balistika",
+    description:
+      "Forenzička analiza oružja, municije i balističkih tragova. Rekonstrukcija događaja, komparativna analiza i identifikacija mehanizama pucanja.",
+    imageSrc: "/images/2147785631.jpg",
+    href: "/vestacenja#kriminalisticka-balistika",
+  },
 ];
 
 const expertizeData = [

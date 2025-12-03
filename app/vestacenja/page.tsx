@@ -11,6 +11,8 @@ import {
   Car,
   Microscope,
   Shield,
+  TrendingUp,
+  Target,
 } from "lucide-react";
 import VestacenjeSection from "@/components/VestacenjeSection";
 
@@ -70,6 +72,16 @@ const oblasti = [
     icon: <FileText className="w-8 h-8" />,
     title: "Utvrđivanje autentičnosti dokumenata i rukopisa",
     href: "#dokumenta-rukopisi",
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Procene vrednosti opreme, mašina i štete nakon različitih incidenata",
+    href: "#procene-vrednosti",
+  },
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: "Forenzička analiza oružja, municije i balističkih tragova",
+    href: "#kriminalisticka-balistika",
   },
 ];
 
@@ -302,6 +314,36 @@ export default function Vestacenja() {
               "Izrada izveštaja: Dokumentovanje svih faza analize i rezultata. Priprema detaljnog izveštaja koji sadrži zaključke i preporuke.",
               "Prezentacija nalaza: Predstavljanje nalaza u sudskim ili drugim zvaničnim postupcima. Pružanje stručnog svedočenja i odgovaranje na pitanja vezana za analizu.",
             ]}
+          />
+
+          {/* Section 7: Procene vrednosti */}
+          <VestacenjeSection
+            id="procene-vrednosti"
+            title="PROCENE VREDNOSTI"
+            introText="Naš tim isporučuje visokokvalitetne procene vrednosti opreme, mašina i štete na objektima i opremi nakon požara, havarija, saobraćajnih i drugih nezgoda — sa preciznošću koja transformiše neizvesnost u čvrst, operativan podatak. Radimo brzo, transparentno i metodološki dosledno, bez kompromisa po pitanju profesionalnog integriteta. Ključni operativni koraci u procesu procene:"
+            items={[
+              "Terenska verifikacija stanja, uključujući vizuelni pregled, identifikaciju oštećenja i prikupljanje tehničkih parametara kritičnih za analizu.",
+              "Analitička obrada i klasifikacija podataka, uz poređenje sa referentnim vrednostima, standardima i istorijskim benchmarkovima.",
+              "Procena rezidualne funkcionalnosti i vrednosti, kroz tehničko-ekonomsku evaluaciju, primenu modela amortizacije i procenu uticaja incidenta.",
+              "Utvrđivanje uzročno–posledičnih faktora koji su oblikovali obim i dinamiku štete, u skladu sa relevantnim pravilnicima i stručnim metodama.",
+              "Konsolidacija nalaza u jasan, merljiv i operativan izveštaj, spreman za pravne postupke, osiguravajuće procese i strateške odluke menadžmenta.",
+            ]}
+            footerText="Procene se izvode u skladu sa međunarodnim standardima (IVS-International Valuation Standard), za potrebe otvaranja kreditnih linija kod banaka i lizing kompanija, kao i procene fer vrednosti u skladu sa MRS 16 (Međunarodnim Računovodstvenim Standardima)."
+          />
+
+          {/* Section 8: Kriminalistička balistika */}
+          <VestacenjeSection
+            id="kriminalisticka-balistika"
+            title="KRIMINALISTIČKA BALISTIKA"
+            introText="U domenu kriminalističke balistike, isporučujemo vrhunski nivo operativne izvrsnosti — agilne analize, precizna merenja i metodologiju kalibrisanu prema najvišim forenzičkim standardima. Naš proces je jasan, strukturiran i ne ostavlja prostor improvizaciji. Ključne vrednosne tačke naše ekspertize:"
+            items={[
+              "Forenzička identifikacija tragova ispaljenja, uz napredne komparativne modele i visokopreciznu instrumentalnu analizu.",
+              "Balistička trajektorija i rekonstrukcija događaja, sa fokusom na izvodljivost, merenja i verifikabilne zaključke.",
+              "Komparativna analiza oružja i municije, sa akcentom na integritet dokaza i procesnu neoborivost.",
+              "Evaluacija mehanizama pucanja, uključujući anomalije, deformacije i scenarije pod povišenim rizikom.",
+              "Izrada sveobuhvatnih nalaza, optimizovanih za pravne procese i strateško donošenje odluka.",
+            ]}
+            footerText="Naša ekspertiza je dizajnirana da smanji neizvesnost, ubrza postupke i omogući operisanje sa jasnom i objektivnom slikom događaja."
           />
         </div>
       </section>

@@ -191,7 +191,7 @@ export default function ONama() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-              Naše Vrednosti
+              Vrednosti koje zastupamo
             </h2>
           </FadeInSection>
 
