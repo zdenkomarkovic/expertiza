@@ -106,7 +106,7 @@ export default function Header() {
             <p className="font-bold text-sm md:text-xl">
               BIRO ZA VEŠTAČENJA - EKSPERTIZA
             </p>
-            <p className="text-xs md:text-sm">
+            <p className="text-xs md:text-sm ">
               STRUČNA I PROFESIONALNA IZRADA TEHNIČKE DOKUMENTACIJE
             </p>
           </div>
