@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "stručne procene",
   ],
   alternates: {
-    canonical: "https://birozavastacenja.rs/",
+    canonical: "https://bzv.rs/",
   },
 };
 

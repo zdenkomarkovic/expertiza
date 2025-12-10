@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Biro za vestacenja",
+  "short_name": "Biro za vestacenja",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

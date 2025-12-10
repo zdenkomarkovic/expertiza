@@ -275,9 +275,9 @@ export default function Home() {
               </h2>
               <p className="text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed mb-12 md:mb-16 px-4">
                 Naš tim pruža sveobuhvatnu forenziku i tehničku podršku tokom
-                sudske parnice. Specijalizovani smo za izradu stručnih nalaza
-                koji pomažu sudovima da donesu ispravne odluke zasnovane na
-                naučnim metodama i forenzičkoj analizi.
+                sudskih i vansudskih postupaka. Specijalizovani smo za izradu
+                stručnih nalaza koji pomažu sudovima da donesu ispravne odluke
+                zasnovane na naučnim metodama i forenzičkoj analizi.
               </p>
             </div>
           </FadeInSection>

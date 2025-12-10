@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://ivanapericin.com", // Zameni svojim domenom
+  siteUrl: "https://bzv.rs", // Zameni svojim domenom
   generateRobotsTxt: true,
   sitemapSize: 5000,
 };
