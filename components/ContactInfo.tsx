@@ -38,10 +38,10 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm text-gray-900">Telefon</p>
             <a
-              href="tel:+381642757802"
+              href="tel:+38162303303"
               className="text-primary font-semibold hover:underline text-lg"
             >
-              +381 (0) 64 27 57 802
+              +381 62 303 303
             </a>
           </div>
         </motion.div>
